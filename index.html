@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSc in Applied Mathematics and Computational Science (AMCS)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-active {
+            display: block;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .icon-list li {
+            padding-left: 2.5rem;
+            position: relative;
+        }
+        .icon-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0.5rem;
+            top: 0.25rem;
+            color: #34d399;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-700">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Header -->
+        <header class="flex flex-col sm:flex-row items-center justify-between mb-12 pb-6 border-b border-slate-200 rounded-lg bg-[#e6f4ff] shadow-sm p-6">
+            <div class="flex items-start gap-4 w-full sm:w-auto">
+            <div class="flex-shrink-0 w-36 sm:w-44 md:w-52 lg:w-64">
+                <img
+                src="4.png"
+                srcset="4.png 1x, 4@2x.png 2x"
+                sizes="(min-width: 1024px) 16rem, (min-width: 768px) 13rem, (min-width: 640px) 11rem, 9rem"
+                alt="Applied Mathematics and Computational Science logo"
+                class="w-full max-w-full h-auto object-contain"
+                loading="lazy"
+                decoding="async"
+                >
+            </div>
+            <div class="flex-1 hidden sm:flex items-center">
+                <!-- kept empty to preserve spacing next to the image on larger screens -->
+            </div>
+            </div>
+
+            <!-- Subtitle placed under the image (visually aligned left on small screens, right on large screens) -->
+            <div class="w-full sm:w-auto mt-4 sm:mt-0 text-center sm:text-right">
+            <p class="text-lg font-semibold text-slate-800">Applied Mathematics and Computational Science</p>
+            <p class="mt-1 text-slate-600">Department of Mathematics and Physics</p>
+            <p class="text-slate-600">North South University</p>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="mb-8 border-b border-slate-200">
+            <nav class="flex flex-wrap -mb-px" aria-label="Tabs">
+                <button onclick="changeTab('overview')" id="tab-overview" class="tab-active w-full sm:w-auto text-lg font-medium text-center border-b-2 py-4 px-6 rounded-t-lg transition-colors duration-200 ease-in-out" aria-current="page">
+                    Overview
+                </button>
+                <button onclick="changeTab('curriculum')" id="tab-curriculum" class="w-full sm:w-auto text-lg font-medium text-center border-b-2 border-transparent hover:border-slate-300 hover:text-slate-600 py-4 px-6 rounded-t-lg transition-colors duration-200 ease-in-out">
+                    Curriculum
+                </button>
+            </nav>
+        </div>
+
+        <!-- Content Sections -->
+        <main>
+            <!-- Overview Section -->
+            <section id="content-overview" class="content-section content-active">
+                <div class="space-y-10">
+                    <div class="card p-8">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-4">About the Graduate Program</h2>
+                        <p class="text-base leading-relaxed mb-6">The Master of Science in Applied Mathematics and Computational Science (MSc in AMCS) degree is intended to provide the student a working knowledge of several areas of applied mathematics, which may include a specific area of application, to prepare for a dynamic career in industry and academia. In addition to providing a solid conceptual foundation for the applications of mathematics, students will be prepared to complete a thesis in topics related to Applied Mathematics and Computational Science.</p>
+                        <h3 class="font-semibold text-lg text-slate-700 mb-2">Vision & Mission</h3>
+                        <p class="text-base leading-relaxed mb-4">Our vision is to develop and enhance students' understanding and skill by offering advanced education and research training in applied mathematics. To achieve this, we aim to:</p>
+                        <ul class="list-disc list-inside space-y-2 text-base leading-relaxed">
+                            <li>Educate students to meet high standards of excellence in applied mathematics.</li>
+                            <li>Foster skilled applied mathematicians with advanced computing knowledge.</li>
+                            <li>Create and disseminate knowledge through applied research.</li>
+                        </ul>
+                    </div>
+
+                     <div class="card p-8">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-4">Graduate Attributes</h2>
+                        <p class="mb-6 text-base leading-relaxed">Upon graduation, students will be equipped to be active and engaged global citizens who can make a significant impact in their chosen fields.</p>
+                        <ul class="space-y-3 text-base icon-list">
+                            <li>Be equipped with comprehensive knowledge and the ability to apply it in practice, including in multi-disciplinary contexts.</li>
+                            <li>Exhibit well-developed skills in critical and creative thinking, and engage in innovative research.</li>
+                            <li>Be well-prepared for living, learning, and working in a digital society.</li>
+                            <li>Convey complex ideas effectively and contribute positively in collaborative environments.</li>
+                            <li>Become responsible and effective global citizens, consistent with their roles as members of society.</li>
+                        </ul>
+                    </div>
+                     <div class="card p-8">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-4">Program Educational Objectives (PEOs)</h2>
+                        <p class="mb-6 text-base leading-relaxed">Graduates of the AMCS program will be able to:</p>
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h3 class="font-bold text-blue-800">PEO1: Excel as Professionals</h3>
+                                <p class="text-blue-700 mt-1">Build upon problem-solving skills, teamwork abilities, and communication skills in fields concerned with applied mathematics.</p>
+                            </div>
+                             <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                <h3 class="font-bold text-green-800">PEO2: Competent Computational Skills</h3>
+                                <p class="text-green-700 mt-1">Analyze and illustrate complex mathematical models related to real-life problems and make informed decisions.</p>
+                            </div>
+                             <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                                <h3 class="font-bold text-indigo-800">PEO3: Lifelong Learning</h3>
+                                <p class="text-indigo-700 mt-1">Participate in activities that enhance professional development through graduate studies, training, and experiences.</p>
+                            </div>
+                            <div class="bg-rose-50 p-4 rounded-lg border border-rose-200">
+                                <h3 class="font-bold text-rose-800">PEO4: Ethical Leadership</h3>
+                                <p class="text-rose-700 mt-1">Demonstrate globally recognized social justice, ethical roles, and responsibilities through contributions to society.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-8">
+                        <h2 class="text-2xl font-bold text-slate-800 mb-4">Admission Requirements</h2>
+                        <ul class="list-disc list-inside space-y-3 text-base leading-relaxed">
+                            <li>A 4-year bachelor's degree in a relevant field (Mathematics, Statistics, Physics, Engineering, CSE, Economics, etc.) with a minimum CGPA of 2.75.</li>
+                            <li>A 3-year bachelor's degree may be considered, conditional on completing 9 credits of remedial mathematics courses.</li>
+                            <li>Acceptable score in the NSU-administered Admission Test or a GRE General Test score of 1100 (Quantitative + Verbal).</li>
+                            <li>Two letters of recommendation.</li>
+                            <li>Prerequisite undergraduate courses: Calculus (Single & Multivariable), Linear Algebra, and Differential Equations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Curriculum Section -->
+            <section id="content-curriculum" class="content-section">
+                <div class="space-y-12">
+                    <div class="card p-8">
+                         <h2 class="text-2xl font-bold text-slate-800 mb-6">Credit Distribution (Total: 40 Credits)</h2>
+                         <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                            <div class="p-4 bg-blue-100 rounded-lg"><div class="text-3xl font-bold text-blue-800">15</div><div class="text-blue-700">Core</div></div>
+                            <div class="p-4 bg-green-100 rounded-lg"><div class="text-3xl font-bold text-green-800">6</div><div class="text-green-700">Elective</div></div>
+                            <div class="p-4 bg-purple-100 rounded-lg"><div class="text-3xl font-bold text-purple-800">9</div><div class="text-purple-700">Optional</div></div>
+                            <div class="p-4 bg-yellow-100 rounded-lg"><div class="text-3xl font-bold text-yellow-800">4</div><div class="text-yellow-700">GED</div></div>
+                            <div class="p-4 bg-red-100 rounded-lg col-span-2 md:col-span-1"><div class="text-3xl font-bold text-red-800">6</div><div class="text-red-700">Thesis</div></div>
+                         </div>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">Semester-wise Course Plan</h2>
+                        <div class="w-full"></div>
+                            <!-- Subtle shaded background behind the table (contains the moved heading) -->
+                            <div id="semester-plan-shade" class="w-full rounded-xl p-6 bg-gradient-to-br from-white to-slate-50 shadow-sm">
+                                <div class="w-full overflow-x-auto">
+                                    <table class="min-w-full table-auto border-collapse">
+                                        <thead>
+                                            <tr class="text-left">
+                                                <th class="px-4 py-3 text-lg font-bold text-slate-800">First Semester<br><span class="text-sm font-medium text-slate-600">14 Credits</span></th>
+                                                <th class="px-4 py-3 text-lg font-bold text-slate-800">Second Semester<br><span class="text-sm font-medium text-slate-600">13 Credits</span></th>
+                                                <th class="px-4 py-3 text-lg font-bold text-slate-800">Third Semester<br><span class="text-sm font-medium text-slate-600">13 Credits</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100">
+                                            <!-- Row: Core (blue) -->
+                                            <tr>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-blue-200 bg-blue-50 text-blue-800">
+                                                        <div class="font-semibold">AMCS 501 / 501L</div>
+                                                        <div class="text-sm text-blue-700">Computational Linear Algebra</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-blue-200 bg-blue-50 text-blue-800">
+                                                        <div class="font-semibold">AMCS 502 / 502L</div>
+                                                        <div class="text-sm text-blue-700">High Performance Parallel Computing</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-blue-200 bg-blue-50 text-blue-800">
+                                                        <div class="font-semibold">AMCS 504 / 504L</div>
+                                                        <div class="text-sm text-blue-700">Advanced Numerical Methods</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Row: Electives (green) -->
+                                            <tr>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-green-200 bg-green-50 text-green-800">
+                                                        <div class="font-semibold">Elective Course 1</div>
+                                                        <div class="text-sm text-green-700">Choose one elective</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-green-200 bg-green-50 text-green-800">
+                                                        <div class="font-semibold">—</div>
+                                                        <div class="text-sm text-green-700">(Optional elective slot)</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-green-200 bg-green-50 text-green-800">
+                                                        <div class="font-semibold">Elective Course 2</div>
+                                                        <div class="text-sm text-green-700">Choose one elective</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Row: Optional / Core / Optional (optional->purple, core->blue) -->
+                                            <tr>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-purple-200 bg-purple-50 text-purple-800">
+                                                        <div class="font-semibold">Optional Course 1</div>
+                                                        <div class="text-sm text-purple-700">Choose one optional</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-blue-200 bg-blue-50 text-blue-800">
+                                                        <div class="font-semibold">AMCS 503</div>
+                                                        <div class="text-sm text-blue-700">Partial Differential Equations: Modeling &amp; Numerics</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-purple-200 bg-purple-50 text-purple-800">
+                                                        <div class="font-semibold">Optional Course 3</div>
+                                                        <div class="text-sm text-purple-700">Choose one optional</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <!-- Row: GED / Thesis (yellow / red) -->
+                                            <tr>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-yellow-200 bg-yellow-50 text-yellow-800">
+                                                        <div class="font-semibold">AMCS 517 / 517L</div>
+                                                        <div class="text-sm text-yellow-700">GED Course &amp; Lab</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-red-200 bg-red-50 text-red-800">
+                                                        <div class="font-semibold">AMCS 599</div>
+                                                        <div class="text-sm text-red-700">Graduate Thesis (Start)</div>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 align-top">
+                                                    <div class="card p-4 rounded-lg border border-red-200 bg-red-50 text-red-800">
+                                                        <div class="font-semibold">AMCS 599</div>
+                                                        <div class="text-sm text-red-700">Graduate Thesis (Continuation)</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Legend: color direction (reordered per Credit Distribution) -->
+                                <div class="mt-6">
+                                    <h4 class="text-sm font-semibold text-slate-700 mb-3 text-center md:text-left">Legend</h4>
+                                    <div class="flex flex-wrap gap-4 items-center justify-center md:justify-start">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-5 h-5 rounded-sm border border-blue-200 bg-blue-50" aria-hidden="true"></span>
+                                            <span class="text-sm text-slate-700">Core Courses (blue)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-5 h-5 rounded-sm border border-green-200 bg-green-50" aria-hidden="true"></span>
+                                            <span class="text-sm text-slate-700">Elective Courses (green)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-5 h-5 rounded-sm border border-purple-200 bg-purple-50" aria-hidden="true"></span>
+                                            <span class="text-sm text-slate-700">Optional Courses (purple)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-5 h-5 rounded-sm border border-yellow-200 bg-yellow-50" aria-hidden="true"></span>
+                                            <span class="text-sm text-slate-700">GED Course (yellow)</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-5 h-5 rounded-sm border border-red-200 bg-red-50" aria-hidden="true"></span>
+                                            <span class="text-sm text-slate-700">Graduate Thesis (red)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- spacer between the shaded table area and the Course Details section -->
+                        <div class="my-10" aria-hidden="true"></div>
+
+                        <!-- script to move the existing "Semester-wise Course Plan" heading into the shaded background -->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const shade = document.getElementById('semester-plan-shade');
+                                if (!shade) return;
+                                // find the heading outside (exact match on text start)
+                                const headings = Array.from(document.querySelectorAll('h2'));
+                                const target = headings.find(h => h.textContent && h.textContent.trim().startsWith('Semester-wise Course Plan'));
+                                if (target) {
+                                    // move it into the shaded container (prepend)
+                                    shade.prepend(target);
+                                    // ensure consistent spacing and center alignment inside shade
+                                    target.classList.add('mb-6','text-center');
+                                }
+                            });
+                        </script>
+                    </div>
+
+                     <div>
+                        <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">Course Details</h2>
+
+                        <!-- Core Courses -->
+                        <div class="mb-10">
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const config = {
+                                        'Core Courses': { headingBorder: 'border-blue-500', cardBg: 'bg-blue-50', cardBorder: 'border-blue-200', cardText: 'text-blue-800' },
+                                        'Elective Courses': { headingBorder: 'border-green-500', cardBg: 'bg-green-50', cardBorder: 'border-green-200', cardText: 'text-green-800' },
+                                        'Optional Courses': { headingBorder: 'border-purple-500', cardBg: 'bg-purple-50', cardBorder: 'border-purple-200', cardText: 'text-purple-800' },
+                                        'GED Course': { headingBorder: 'border-yellow-500', cardBg: 'bg-yellow-50', cardBorder: 'border-yellow-200', cardText: 'text-yellow-800' },
+                                        'Graduate Thesis': { headingBorder: 'border-red-500', cardBg: 'bg-red-50', cardBorder: 'border-red-200', cardText: 'text-red-800' }
+                                    };
+
+                                    // Find all section headings (h3) relevant to course groups
+                                    const headings = Array.from(document.querySelectorAll('h3'));
+                                    const relevant = headings.filter(h => Object.keys(config).some(k => h.textContent.includes(k)));
+
+                                    relevant.forEach((h, idx) => {
+                                        const key = Object.keys(config).find(k => h.textContent.includes(k));
+                                        if (!key) return;
+                                        const { headingBorder, cardBg, cardBorder, cardText } = config[key];
+
+                                        // ensure heading has the left border (keeps existing classes)
+                                        h.classList.add('border-l-4', 'pl-4');
+                                        if (!h.classList.contains(headingBorder)) h.classList.add(headingBorder);
+
+                                        // Apply color classes to .card elements until the next relevant h3
+                                        let el = h.nextElementSibling;
+                                        while (el && !(el.tagName === 'H3' && Object.keys(config).some(k => el.textContent.includes(k)))) {
+                                            // apply to cards inside this element
+                                            const cards = Array.from(el.querySelectorAll('.card'));
+                                            cards.forEach(card => {
+                                                // remove any previous explicit color utility classes that conflict (best-effort)
+                                                card.classList.remove('bg-white', 'text-slate-800', 'text-slate-600');
+                                                // add configured color utilities
+                                                if (!card.classList.contains(cardBg)) card.classList.add(cardBg);
+                                                if (!card.classList.contains(cardBorder)) card.classList.add(cardBorder);
+                                                // ensure text color for titles/metadata inside card
+                                                card.querySelectorAll('h4, .font-semibold, .text-sm').forEach(inner => {
+                                                    if (!inner.classList.contains(cardText)) inner.classList.add(cardText);
+                                                });
+                                            });
+                                            el = el.nextElementSibling;
+                                        }
+                                    });
+                                });
+                            </script>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-4 border-l-4 border-blue-500 pl-4">Core Courses (15 Credit Hours)</h3>
+                            <p class="text-slate-600 mb-6 ml-5">All courses are mandatory and form the foundation of the AMCS program.</p>
+                            <div class="space-y-6">
+                                <div class="card p-6 border-l-4 border-blue-300 bg-blue-50">
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-800">AMCS 501: Computational Linear Algebra</h4>
+                                        <p class="mt-1 text-slate-600">Focuses on matrix computations, algorithms, and their applications in solving large-scale problems.</p>
+                                    </div>
+                                    <hr class="my-4 border-blue-200">
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-800">AMCS 501L: Computational Linear Algebra Lab</h4>
+                                        <p class="mt-1 text-slate-600">Hands-on implementation of numerical linear algebra algorithms using modern software tools.</p>
+                                    </div>
+                                </div>
+                                <div class="card p-6 border-l-4 border-blue-300 bg-blue-50">
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-800">AMCS 502: High Performance Parallel Computing</h4>
+                                        <p class="mt-1 text-slate-600">Explores parallel computing architectures and programming models for scientific and engineering applications.</p>
+                                    </div>
+                                    <hr class="my-4 border-blue-200">
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-800">AMCS 502L: High Performance Parallel Computing Lab</h4>
+                                        <p class="mt-1 text-slate-600">Practical experience in developing and optimizing parallel programs for multi-core systems.</p>
+                                    </div>
+                                </div>
+                                <div class="card p-6">
+                                    <h4 class="font-bold text-lg text-slate-800">AMCS 503: Partial Differential Equations: Modeling and Numerics</h4>
+                                    <p class="mt-1 text-slate-600">Covers the theory of PDEs, modeling real-world phenomena, and numerical solution techniques.</p>
+                                </div>
+                                <div class="card p-6 border-l-4 border-blue-300 bg-blue-50">
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-800">AMCS 504: Advanced Numerical Methods and Computation</h4>
+                                        <p class="mt-1 text-slate-600">Advanced study of numerical techniques for approximation, integration, and solving differential equations.</p>
+                                    </div>
+                                    <hr class="my-4 border-blue-200">
+                                    <div>
+                                        <h4 class="font-bold text-lg text-slate-800">AMCS 504L: Advanced Numerical Methods and Computation Lab</h4>
+                                        <p class="mt-1 text-slate-600">Implementation of complex numerical methods for solving advanced mathematical problems.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Elective Courses -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-4 border-l-4 border-green-500 pl-4">Elective Courses (6 Credit Hours)</h3>
+                            <p class="text-slate-600 mb-6 ml-5">Select any two courses to specialize your knowledge.</p>
+                            <div class="space-y-6">
+                                <div class="card p-6">
+                                    <h4 class="font-bold text-lg text-slate-800">AMCS 505: Advanced Control Theory and Application</h4>
+                                    <p class="mt-1 text-slate-600">Studies modern control systems, including state-space analysis, optimal control, and stability.</p>
+                                </div>
+                                <div class="card p-6">
+                                    <h4 class="font-bold text-lg text-slate-800">AMCS 506: Computational Fluid Dynamics</h4>
+                                    <p class="mt-1 text-slate-600">Introduces numerical methods for simulating fluid flow and heat transfer problems.</p>
+                                </div>
+                                <div class="card p-6">
+                                    <h4 class="font-bold text-lg text-slate-800">AMCS 507: Advanced Mathematical Modelling</h4>
+                                    <p class="mt-1 text-slate-600">Develops skills in creating, analyzing, and interpreting mathematical models from various scientific fields.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Optional Courses -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-800 mb-4 border-l-4 border-purple-500 pl-4">Optional Courses (9 Credit Hours)</h3>
+                            <p class="text-slate-600 mb-6 ml-5">Choose any three courses to further broaden your expertise.</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 508: Dynamical Systems and Chaos</h4><p class="mt-1 text-slate-600">An introduction to the behavior of nonlinear systems, bifurcations, and chaotic dynamics.</p></div>
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 509: Mathematics for Data Science and Machine Learning</h4><p class="mt-1 text-slate-600">Covers the core mathematical concepts that underpin modern data science and ML algorithms.</p></div>
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 510: Mathematical Control Theory</h4><p class="mt-1 text-slate-600">A rigorous study of the mathematical foundations of control theory for dynamic systems.</p></div>
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 511: Operations Research</h4><p class="mt-1 text-slate-600">Focuses on mathematical optimization techniques for decision-making in complex systems.</p></div>
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 512: Numerical Analysis</h4><p class="mt-1 text-slate-600">A foundational course on the theory and application of numerical algorithms.</p></div>
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 513: Financial Mathematics</h4><p class="mt-1 text-slate-600">Explores mathematical models used in finance, including stochastic calculus and option pricing.</p></div>
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 514: Applied Harmonic Analysis</h4><p class="mt-1 text-slate-600">Studies the theory and applications of Fourier analysis, wavelets, and signal processing.</p></div>
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 515: Essential of Advanced Mathematics - I</h4><p class="mt-1 text-slate-600">A refresher course on advanced topics in calculus, algebra, and analysis for students from diverse backgrounds.</p></div>
+                                <div class="card p-6"><h4 class="font-bold text-lg text-slate-800">AMCS 516: Essential of Advanced Mathematics - II</h4><p class="mt-1 text-slate-600">A continuation of AMCS 515, covering more advanced mathematical concepts required for the program.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4 border-l-4 border-yellow-500 pl-4">GED Course (4 Credit Hours)</h3>
+                        <div class="card p-6 border-l-4 border-yellow-300 bg-yellow-50">
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">AMCS 517: Research Methodology in Mathematics Education</h4>
+                                <p class="mt-1 text-slate-600">Introduces research methods, academic writing, and presentation skills essential for graduate-level research.</p>
+                            </div>
+                            <hr class="my-4 border-yellow-200">
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">AMCS 517L: Labs on Mathematical Research Tools</h4>
+                                <p class="mt-1 text-slate-600">Practical training on using software like LaTeX, MATLAB, or Python for mathematical research and documentation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4 border-l-4 border-red-500 pl-4">Graduate Thesis (6 Credit Hours)</h3>
+                         <div class="card p-6 border-l-4 border-red-300 bg-red-50">
+                            <h4 class="font-bold text-lg text-slate-800">AMCS 599: Graduate Thesis</h4>
+                            <p class="mt-1 text-slate-600">A mandatory, two-semester research project where students conduct an in-depth study on a topic in applied mathematics or computational science under the supervision of a faculty member. This culminates in a written thesis and a final defense.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-300 mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="w-full flex justify-center">
+                <div class="max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-8 mx-auto">
+                    <!-- Info Grid (centered, equal spacing) -->
+                    <div class="w-full md:flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
+                        <div>
+                            <h3 class="font-bold text-white text-lg mb-2">Contact Us</h3>
+                            <p class="text-slate-200">Department of Mathematics and Physics</p>
+                            <p class="text-slate-200">School of Engineering and Physical Sciences</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg mb-2">Location</h3>
+                            <p class="text-slate-200">North South University</p>
+                            <p class="text-slate-200">Bashundhara, Dhaka-1229, Bangladesh</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg mb-2">Quick Links</h3>
+                            <a href="http://www.northsouth.edu/" target="_blank" class="block text-slate-200 hover:text-blue-300 transition-colors">NSU Official Website</a>
+                            <a href="http://www.northsouth.edu/admissions/graduate.html" target="_blank" class="block mt-1 text-slate-200 hover:text-blue-300 transition-colors">Graduate Admission</a>
+                        </div>
+                    </div>
+
+                    <!-- Logos (aligned vertically center, slightly larger) -->
+                    <div class="flex items-center justify-center gap-6 md:ml-6">
+                        <img src="North_South_University_Monogram.png" alt="North South University Monogram" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain" loading="lazy">
+                        <img src="NSU MAT PHY_transparent_1.png" alt="NSU Physics Logo" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright / Bottom Bar (fixed below the above content) -->
+            <div class="border-t border-slate-700 mt-8 pt-6 text-center text-sm text-slate-400 w-full">
+                <p>&copy; 2025 Department of Mathematics and Physics. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('[id^="tab-"]');
+        const contentSections = document.querySelectorAll('[id^="content-"]');
+
+        function changeTab(tabId) {
+            tabs.forEach(tab => {
+                tab.classList.remove('tab-active');
+                tab.setAttribute('aria-current', 'false');
+            });
+
+            contentSections.forEach(section => {
+                section.classList.remove('content-active');
+            });
+
+            const selectedTab = document.getElementById(`tab-${tabId}`);
+            selectedTab.classList.add('tab-active');
+            selectedTab.setAttribute('aria-current', 'page');
+            
+            const selectedContent = document.getElementById(`content-${tabId}`);
+            selectedContent.classList.add('content-active');
+        }
+    </script>
+</body>
+</html>
+
