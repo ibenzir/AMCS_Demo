@@ -11,6 +11,19 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
         }
+        /* Keep the page from stretching too wide on large desktop screens */
+        .site-container {
+            max-width: 1300px; /* comfortable reading width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (max-width: 640px) {
+            .site-container {
+                max-width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
         .tab-active {
             border-color: #3b82f6;
             color: #3b82f6;
@@ -49,7 +62,7 @@
 </head>
 <body class="antialiased text-slate-700">
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="site-container px-4 sm:px-6 lg:px-8 py-12">
 
         <!-- Header -->
         <header class="flex flex-col sm:flex-row items-center justify-between mb-12 pb-6 border-b border-slate-200 rounded-lg bg-[#e6f4ff] shadow-sm p-6">
